@@ -13,6 +13,7 @@
 		BF4761761FFDC1F300D67F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4761751FFDC1F300D67F5F /* Assets.xcassets */; };
 		BF4761791FFDC1F300D67F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4761771FFDC1F300D67F5F /* LaunchScreen.storyboard */; };
 		BF4761841FFDC1F400D67F5F /* MAPD714_TODO_LISTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4761831FFDC1F400D67F5F /* MAPD714_TODO_LISTTests.swift */; };
+		BF47618F1FFDDF7900D67F5F /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47618E1FFDDF7900D67F5F /* Reminder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		BF47617F1FFDC1F400D67F5F /* MAPD714-TODO-LISTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MAPD714-TODO-LISTTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4761831FFDC1F400D67F5F /* MAPD714_TODO_LISTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAPD714_TODO_LISTTests.swift; sourceTree = "<group>"; };
 		BF4761851FFDC1F400D67F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF47618E1FFDDF7900D67F5F /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				BF47616E1FFDC1F300D67F5F /* AppDelegate.swift */,
 				BF4761701FFDC1F300D67F5F /* ViewController.swift */,
 				BF4761721FFDC1F300D67F5F /* Main.storyboard */,
+				BF47618E1FFDDF7900D67F5F /* Reminder.swift */,
 				BF4761751FFDC1F300D67F5F /* Assets.xcassets */,
 				BF4761771FFDC1F300D67F5F /* LaunchScreen.storyboard */,
 				BF47617A1FFDC1F300D67F5F /* Info.plist */,
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF47618F1FFDDF7900D67F5F /* Reminder.swift in Sources */,
 				BF4761711FFDC1F300D67F5F /* ViewController.swift in Sources */,
 				BF47616F1FFDC1F300D67F5F /* AppDelegate.swift in Sources */,
 			);
