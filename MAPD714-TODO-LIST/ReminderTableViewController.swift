@@ -1,16 +1,18 @@
-//
-//  ReminderTableViewController.swift
-//  MAPD714-TODO-LIST
-//
-//  Created by FERNANDO ITO on 2018-01-04.
-//  Copyright © 2018 FERNANDO ITO. All rights reserved.
-//
+/*
+ * Centennial College - MAPD714 - Fall 2017
+ * MAPD714-TODO-LIST
+ * Created by:
+ *    300929258 - Irvinder Kaur
+ *    300960367 - Fernando Ito
+ * ReminderTableViewController.swift - Version 1.0
+ */
 
 import UIKit
 
 class ReminderTableViewController: UITableViewController {
     //Properties
     var reminders = [Reminder]()
+    //var reminder: Reminder?
     let dateFormatter = DateFormatter()
     let locale = NSLocale.current
 
@@ -85,7 +87,19 @@ class ReminderTableViewController: UITableViewController {
         } 
     }
     
-
+    @IBAction func unwindToReminderList(sender: UIStoryboardSegue) {
+        if let sourceView = sender.source as? AddReminderViewController, let reminder = sourceView.reminder {
+            
+            // Add a new reminder
+            let newIndexPath = NSIndexPath(row: reminders.count, section: 0)
+            reminders.append(reminder)
+            tableView.insertRows(at: [newIndexPath as IndexPath], with: UITableViewRowAnimation.bottom)
+            
+            saveReminders()
+            tableView.reloadData()
+        }
+        
+    }
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {

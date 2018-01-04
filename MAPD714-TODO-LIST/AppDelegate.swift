@@ -1,10 +1,11 @@
-//
-//  AppDelegate.swift
-//  MAPD714-TODO-LIST
-//
-//  Created by FERNANDO ITO on 2018-01-03.
-//  Copyright © 2018 FERNANDO ITO. All rights reserved.
-//
+/* 
+ * Centennial College - MAPD714 - Fall 2017
+ * MAPD714-TODO-LIST
+ * Created by:
+ *    300929258 - Irvinder Kaur
+ *    300960367 - Fernando Ito
+ * AppDelegate.swift - Version 1.0
+ */
 
 import UIKit
 
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil))
         return true
     }
 

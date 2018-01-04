@@ -1,8 +1,10 @@
 /*
  * Centennial College - MAPD714 - Fall 2017
  * MAPD714-TODO-LIST
- * Created by FERNANDO ITO on 2018-01-03.
- * Version 0.1
+ * Created by:
+ *    300929258 - Irvinder Kaur
+ *    300960367 - Fernando Ito
+ * Reminder.swift - Version 1.0
  */
 import Foundation
 import UIKit

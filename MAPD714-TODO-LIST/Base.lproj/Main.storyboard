@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Reminders-->
+        <!--TO DO-->
         <scene sceneID="nT1-qd-095">
             <objects>
                 <tableViewController id="du3-nB-sUd" customClass="ReminderTableViewController" customModule="MAPD714_TODO_LIST" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,7 +49,7 @@
                             <outlet property="delegate" destination="du3-nB-sUd" id="gic-Mc-Ehu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Reminders" id="o9w-nE-wmi">
+                    <navigationItem key="navigationItem" title="TO DO" id="o9w-nE-wmi">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="UUJ-i3-VzA">
                             <connections>
                                 <segue destination="bJM-ak-g9w" kind="presentation" id="sTI-he-6XE"/>
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="439.19999999999999" y="-255.02248875562222"/>
         </scene>
-        <!--Add Reminder-->
+        <!--Add TO DO-->
         <scene sceneID="E3D-an-Oi9">
             <objects>
-                <viewController id="F5S-5F-CnD" sceneMemberID="viewController">
+                <viewController id="F5S-5F-CnD" customClass="AddReminderViewController" customModule="MAPD714_TODO_LIST" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BKF-3u-FfG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,9 +77,15 @@
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Yy-6Y-ebC">
                                 <rect key="frame" x="0.0" y="110" width="375" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="djG-lP-DBo"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="536731386.989483">
                                     <!--2018-01-04 04:03:06 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="timeChanged:" destination="F5S-5F-CnD" eventType="valueChanged" id="2bT-2I-0Rg"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,11 +99,26 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C55-g4-8O8"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Reminder" id="H0m-yn-Gmz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="e11-ul-0fp"/>
+                    <navigationItem key="navigationItem" title="Add TO DO" id="H0m-yn-Gmz">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Muv-Zl-h00">
+                            <connections>
+                                <action selector="cancel:" destination="F5S-5F-CnD" id="3AA-wk-CGh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="e11-ul-0fp">
+                            <connections>
+                                <segue destination="TrB-2c-2Np" kind="unwind" unwindAction="unwindToReminderListWithSender:" id="Rtn-Hd-pnI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="reminderTextField" destination="MdP-JV-c8K" id="eoa-OL-ICo"/>
+                        <outlet property="saveButton" destination="e11-ul-0fp" id="0t7-F7-01a"/>
+                        <outlet property="timePicker" destination="6Yy-6Y-ebC" id="PIr-hj-yqi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMC-ju-eWI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="TrB-2c-2Np" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2093.5999999999999" y="-256.82158920539734"/>
         </scene>

@@ -1,10 +1,11 @@
-//
-//  MAPD714_TODO_LISTTests.swift
-//  MAPD714-TODO-LISTTests
-//
-//  Created by FERNANDO ITO on 2018-01-03.
-//  Copyright © 2018 FERNANDO ITO. All rights reserved.
-//
+/*
+ * Centennial College - MAPD714 - Fall 2017
+ * MAPD714-TODO-LIST
+ * Created by:
+ *    300929258 - Irvinder Kaur
+ *    300960367 - Fernando Ito
+ * MAPD714_TODO_LISTTests.swift - Version 1.0
+ */
 
 import XCTest
 @testable import MAPD714_TODO_LIST
